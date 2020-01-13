@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Bypass Google Drive virus scan
 // @namespace    https://konayuki.moe/
-// @version      1.0.1
+// @version      1.0.2
 // @description  Bypass Google Drive virus scan
 // @author       Proflylab
 // @icon         https://avatars1.githubusercontent.com/u/27909158?s=460&v=4
@@ -20,7 +20,7 @@
         setTimeout(() => window.close(), 5000);
     }
     let err = document.getElementsByClassName("uc-error-caption");
-    if (err){
+    if (err.length > 0){
         document.title = "Bypass Google Drive virus scan";
         document.body.innerHTML = err[0].innerHTML + "... after 5 second will close the window.";
         setTimeout(() => window.close(), 5000);
